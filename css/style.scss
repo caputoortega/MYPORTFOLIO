@@ -1,0 +1,110 @@
+$primary: #FFFFFC;
+$text-primary: #141414;
+$secondary: #F3F3F3;
+$accent: #FF7700;
+$accent_business: #309900;
+$border: #14141430;
+
+.button-primary {
+    background-color: $accent !important;
+    border-color: $accent !important;
+}
+
+a {
+    color: $accent;
+}
+
+body {
+    background-color: $primary;
+    color: $text-primary;
+}
+
+main {
+    padding-top: 8vh;
+}
+
+.container-full-width {
+    min-width: 100%;
+    margin: 0;
+    padding: 5px;
+}
+
+/*
+ *
+ * PROFILE
+ *
+*/
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: $secondary;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+
+
+.profile_details {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile_details h1 {
+    line-height: 0;
+}
+
+.pfp_user,
+.pfp_business {
+    border-radius: 100%;
+    max-width: 162px;
+    box-shadow: 0 0 10px $accent;
+}
+
+.pfp_business {
+    border-radius: 25%;
+    box-shadow: 0 0 10px $accent_business;
+
+}
+
+.profile_name {
+    font-weight: bold;
+}
+
+.profile_category {
+    font-size: 18px;
+    text-decoration: none;
+    font-variant: small-caps;
+}
+
+.profile_description {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.profile_social {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.profile_social_details {
+    display: flex;
+    padding: 0;
+    gap: 5px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.profile_social_followers::after {
+    content: " · ";
+    color: $text-primary;
+}
+
+.portfolio {
+    background-color: $secondary;
+    min-height: 20vh;
+}

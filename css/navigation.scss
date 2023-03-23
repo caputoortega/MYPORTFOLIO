@@ -1,3 +1,8 @@
+$primary: #FFFFFC;
+$accent: #FF7700;
+$inactive: #686868;
+$border: #14141430;
+
 .top-navigation,
 .bottom-navigation {
     position: fixed;
@@ -7,8 +12,12 @@
     min-height: 10%;
     max-height: 10%;
     min-width: 100%;
-    background-color: var(--text-primary);
+    background-color: $primary;
     align-items: center;
+}
+
+.bottom-navigation {
+    border-top: .5px solid $border;
 }
 
 .top-navigation {
@@ -16,6 +25,7 @@
     padding-top: 2%;
     min-height: 6%;
     max-height: 6%;
+    border-bottom: .5px solid $border;
 }
 
 .menu {
@@ -58,11 +68,11 @@
 }
 
 .menu-item a {
-    color: #686868;
+    color: $inactive;
 }
 
 .top-navigation .menu-item a {
-    color: #6d3fca;
+    color: $accent;
 }
 
 .menu-item[active] {
