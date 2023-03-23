@@ -21,6 +21,7 @@ body {
 
 main {
     padding-top: 8vh;
+    padding-bottom: 15vh;
 }
 
 .container-full-width {
@@ -51,11 +52,12 @@ main {
     margin-top: 30px;
     flex-direction: column;
     align-items: center;
+
+    h1 {
+        line-height: 0;
+    }
 }
 
-.profile_details h1 {
-    line-height: 0;
-}
 
 .pfp_user,
 .pfp_business {
@@ -104,7 +106,84 @@ main {
     color: $text-primary;
 }
 
+/*
+ *
+ * PROJECT SECTION
+ *
+*/
+
 .portfolio {
+    display: flex;
+    flex-direction: column;
     background-color: $secondary;
     min-height: 20vh;
+    gap: 5px;
+}
+
+.portfolio_title {
+    align-self: center;
+    font-size: 3vh;
+    line-height: 0;
+    margin: 0;
+    text-decoration: overline underline double;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+$card-radius: 25px;
+
+.project_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    border-radius: $card-radius;
+    background: $primary;
+    min-height: 150px;
+    margin: 5px;
+    box-shadow: 0 0 3px 0 black;
+
+    .button {
+        margin-bottom: 15px;
+        min-width: 85%;
+    }
+
+
+}
+
+.project_card_data {
+    display: flex;
+    gap: 15px;
+    padding: 10px 25px;
+}
+
+.project_icon {
+    border-radius: $card-radius;
+    max-height: 128px;
+    max-width: 128px;
+    align-self: center;
+}
+
+.project_title {
+    font-size: 4vh;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.project_details {
+
+    display: flex;
+    flex-direction: column;
+    
+    .project_description {
+        font-size: 2vh;
+        max-height: 12ex;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: justify;
+    }
+
 }

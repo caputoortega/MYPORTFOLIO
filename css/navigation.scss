@@ -3,6 +3,44 @@ $accent: #FF7700;
 $inactive: #686868;
 $border: #14141430;
 
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 24px;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+
+    li {
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    width: 16%;
+
+    a {
+        color: $inactive;
+    }
+
+}
+
+.menu-item[active] {
+    border-top: 2px solid #141414;
+
+    a {
+        color: #141414;
+    }
+
+}
+
 .top-navigation,
 .bottom-navigation {
     position: fixed;
@@ -26,30 +64,16 @@ $border: #14141430;
     min-height: 6%;
     max-height: 6%;
     border-bottom: .5px solid $border;
-}
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-    font-size: 24px;
-    list-style: none;
-    text-decoration: none;
-    margin: 0;
-}
+    .menu {
+        justify-content: flex-end;
+    }
 
-.top-navigation .menu {
-    justify-content: flex-end;
-}
-
-.menu li {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.menu li:not(:last-child) {
+    .menu-item {
+        a {
+            color: $accent;
+        }
+    }
 
 }
 
@@ -59,28 +83,6 @@ $border: #14141430;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 6 Free";
-}
-
-.menu-item {
-    display: flex;
-    justify-content: center;
-    width: 16%;
-}
-
-.menu-item a {
-    color: $inactive;
-}
-
-.top-navigation .menu-item a {
-    color: $accent;
-}
-
-.menu-item[active] {
-    border-top: 2px solid #141414;
-}
-
-.menu-item[active] a {
-    color: #141414;
 }
 
 .nav_home-button::before {
